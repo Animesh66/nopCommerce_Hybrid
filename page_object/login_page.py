@@ -1,5 +1,6 @@
 from selenium import webdriver
 
+
 class LoginNopCommerce:
     # identify all the locators in the page class
     username_textbox_id = "Email"
