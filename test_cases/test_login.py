@@ -10,7 +10,6 @@ class TestTC001Login:
     email = "admin@yourstore.com"
     password = "admin"
 
-
     def test_homepage_title(self):
         self.driver = webdriver.Chrome()
         # self.driver = setup
@@ -24,7 +23,6 @@ class TestTC001Login:
             self.driver.save_screenshot("./screenshots/test_homepage_title.png")  # this is the path and screenshot name
             self.driver.close()
             assert False
-
 
     def test_login(self):
         # self.driver = setup
