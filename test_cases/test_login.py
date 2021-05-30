@@ -1,18 +1,15 @@
 # this testcase will perform the login functionality testing
 # filename should always start with test as pytest have this naming convention
 from page_object.login_page import LoginNopCommerce
-from selenium import webdriver
-import pytest
-
+from test_cases.config_test import setup
 
 class TestTC001Login:
     base_url = "https://admin-demo.nopcommerce.com"
     email = "admin@yourstore.com"
     password = "admin"
 
-    def test_homepage_title(self):
-        self.driver = webdriver.Chrome()
-        # self.driver = setup
+    def test_homepage_title(self, setup):
+        self.driver = setup
         self.driver.maximize_window()
         self.driver.get(self.base_url)
         actual_title = self.driver.title
@@ -24,9 +21,8 @@ class TestTC001Login:
             self.driver.close()
             assert False
 
-    def test_login(self):
-        # self.driver = setup
-        self.driver = webdriver.Chrome()
+    def test_login(self, setup):
+        self.driver = setup
         self.driver.maximize_window()
         self.driver.get(self.base_url)
         self.login = LoginNopCommerce(self.driver)
