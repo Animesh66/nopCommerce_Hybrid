@@ -9,7 +9,7 @@ class LoginNopCommerce:
         self.driver = driver
 
     # initiate all ACTION METHOD
-    def set_username(self, email):
+    def set_email(self, email):
         self.driver.find_element_by_id(self.email_textbox_id).clear()
         self.driver.find_element_by_id(self.email_textbox_id).send_keys(email)
 
