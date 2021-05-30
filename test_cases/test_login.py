@@ -3,6 +3,7 @@
 from page_object.login_page import LoginNopCommerce
 from test_cases.config_test import setup
 
+
 class TestTC001Login:
     base_url = "https://admin-demo.nopcommerce.com"
     email = "admin@yourstore.com"
