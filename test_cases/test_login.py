@@ -6,24 +6,25 @@ import pytest
 from page_object.login_page import LoginNopCommerce
 
 
+
 class TestTC001Login:
     base_url = "https://admin-demo.nopcommerce.com"
     email = "admin@yourstore.com"
     password = "admin"
 
-    def test_homepage_title(self):
-        self.driver = webdriver.Chrome()
+    def test_homepage_title(self, setup):
+        self.driver = setup
         self.driver.maximize_window()
         self.driver.get(self.base_url)
         actual_title = self.driver.title
-        self.driver.close()
         if actual_title == "Your store. Login":
             assert True
         else:
             assert False
+        self.driver.close()
 
-    def test_login(self):
-        self.driver = webdriver.Chrome()
+    def test_login(self, setup):
+        self.driver = setup
         self.driver.maximize_window()
         self.driver.get(self.base_url)
         self.login = LoginNopCommerce(self.driver)
@@ -35,3 +36,4 @@ class TestTC001Login:
             assert True
         else:
             assert False
+        self.driver.close()
