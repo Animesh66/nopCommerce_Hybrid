@@ -1,6 +1,3 @@
-from selenium import webdriver
-
-
 # this is Page Object Model(POM)
 class LoginNopCommerce:
     # identify all the LOCATORS in the page class
