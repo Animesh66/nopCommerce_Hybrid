@@ -16,7 +16,7 @@ class TestTC001Login:
         self.driver.maximize_window()
         self.driver.get(self.base_url)
         actual_title = self.driver.title
-        if actual_title == "Your store. Login123":
+        if actual_title == "Your store. Login":
             self.driver.close()
             assert True
         else:
@@ -34,7 +34,7 @@ class TestTC001Login:
         self.login.set_password(self.password)
         self.login.click_login()
         actual_title = self.driver.title
-        if actual_title == "Dashboard / nopCommerce administration123":
+        if actual_title == "Dashboard / nopCommerce administration":
             self.driver.close()
             assert True
         else:
