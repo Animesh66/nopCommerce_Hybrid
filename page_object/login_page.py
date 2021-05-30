@@ -11,11 +11,11 @@ class LoginNopCommerce:
         self.driver = driver
 
     # initiate all action method
-    def set_username(self,username):
+    def set_username(self, username):
         self.driver.find_element_by_id(self.username_textbox_id).clear()
         self.driver.find_element_by_id(self.username_textbox_id).send_keys(username)
 
-    def set_password(self,password):
+    def set_password(self, password):
         self.driver.find_element_by_id(self.password_textbox_id).clear()
         self.driver.find_element_by_id(self.password_textbox_id).send_keys(password)
 
