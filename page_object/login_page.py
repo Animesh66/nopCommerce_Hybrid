@@ -1,7 +1,7 @@
 # this is Page Object Model(POM)
 class LoginNopCommerce:
     # identify all the LOCATORS in the page class
-    username_textbox_id = "Email"
+    email_textbox_id = "Email"
     password_textbox_id = "Password"
     logout_link_xpath = "//a[contains(text(),'Logout')]"
 
@@ -9,9 +9,9 @@ class LoginNopCommerce:
         self.driver = driver
 
     # initiate all ACTION METHOD
-    def set_username(self, username):
-        self.driver.find_element_by_id(self.username_textbox_id).clear()
-        self.driver.find_element_by_id(self.username_textbox_id).send_keys(username)
+    def set_username(self, email):
+        self.driver.find_element_by_id(self.email_textbox_id).clear()
+        self.driver.find_element_by_id(self.email_textbox_id).send_keys(email)
 
     def set_password(self, password):
         self.driver.find_element_by_id(self.password_textbox_id).clear()
