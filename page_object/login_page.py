@@ -1,8 +1,9 @@
 from selenium import webdriver
 
 
+# this is Page Object Model(POM)
 class LoginNopCommerce:
-    # identify all the locators in the page class
+    # identify all the LOCATORS in the page class
     username_textbox_id = "Email"
     password_textbox_id = "Password"
     logout_link_xpath = "//a[contains(text(),'Logout')]"
@@ -10,7 +11,7 @@ class LoginNopCommerce:
     def __init__(self, driver):  # constructor initiated
         self.driver = driver
 
-    # initiate all action method
+    # initiate all ACTION METHOD
     def set_username(self, username):
         self.driver.find_element_by_id(self.username_textbox_id).clear()
         self.driver.find_element_by_id(self.username_textbox_id).send_keys(username)
