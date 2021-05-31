@@ -5,7 +5,7 @@ import logging
 class LogGeneration:
     @staticmethod
     def log_generation():
-        logging.basicConfig(filename="./logs/automation.log",
+        logging.basicConfig(filename="/logs/automations.log",
                             format='%(asctime)s: %(levelname)s: %(message)s',
                             datefmt='%m/%d/%Y %I:%M:%S %p')
         logger = logging.getLogger()
