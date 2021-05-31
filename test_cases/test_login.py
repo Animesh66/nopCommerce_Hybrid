@@ -2,12 +2,12 @@
 # filename should always start with test as pytest have this naming convention
 from page_object.login_page import LoginNopCommerce
 from test_cases.config_test import setup
-
+from utilities.read_properties import ReadConfig
 
 class TestTC001Login:
-    base_url = "https://admin-demo.nopcommerce.com"
-    email = "admin@yourstore.com"
-    password = "admin"
+    base_url = ReadConfig.get_application_url()
+    email = ReadConfig.get_email()
+    password = ReadConfig.get_password()
 
     def test_homepage_title(self, setup):
         self.driver = setup
