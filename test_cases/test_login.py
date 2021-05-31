@@ -4,6 +4,7 @@ from page_object.login_page import LoginNopCommerce
 from test_cases.config_test import setup
 from utilities.read_properties import ReadConfig
 
+
 class TestTC001Login:
     base_url = ReadConfig.get_application_url()
     email = ReadConfig.get_email()
