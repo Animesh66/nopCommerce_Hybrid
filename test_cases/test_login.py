@@ -3,7 +3,8 @@
 from page_object.login_page import LoginNopCommerce
 from test_cases.config_test import setup
 from utilities.read_properties import ReadConfig
-from utilities.cutom_logger import LogGeneration
+from utilities.custom_logger import LogGeneration
+
 
 class TestTC001Login:
     base_url = ReadConfig.get_application_url()
@@ -43,7 +44,7 @@ class TestTC001Login:
             assert True
             self.driver.close()
         else:
-            self.logger.error("************* Login Test is failer ************* ")
+            self.logger.error("************* Login Test is failed ************* ")
             assert False
             self.driver.save_screenshot("./screenshots/screenshotstest_login.png")  # this is the path and screenshot name
             self.driver.close()
