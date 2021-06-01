@@ -8,6 +8,8 @@ def setup(browser):
         driver = webdriver.Chrome()
     elif browser == 'firefox' or 'Firefox':
         driver = webdriver.Firefox()
+    else:
+        driver = webdriver.Chrome()
     return driver
 
 
