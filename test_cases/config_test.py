@@ -3,7 +3,7 @@ from selenium import webdriver
 
 
 @pytest.fixture()
-def setup(browser):
+def setup():
     if browser == 'chrome' or 'Chrome':
         driver = webdriver.Chrome()
     elif browser == 'firefox' or 'Firefox':
@@ -15,6 +15,7 @@ def setup(browser):
 
 def pytest_addoption(parser):  # this will get the value from CLI/hook
     parser.addoption("--browser")
+
 
 @pytest.fixture()
 def browser(request):  # this will return the browser value to set up method

@@ -31,7 +31,7 @@ class TestTC001Login:
 
     def test_login(self, setup):
         self.logger.info("************* Verify Login Test ************* ")
-        self.driver = setup
+        self.driver = setup()
         self.driver.maximize_window()
         self.driver.get(self.base_url)
         self.login = LoginNopCommerce(self.driver)
