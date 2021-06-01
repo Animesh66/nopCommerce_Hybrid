@@ -1,7 +1,7 @@
 import logging
 
 
-# this file will generate INFO lo for test cases
+# this file will generate INFO log for test cases
 class LogGeneration:
     @staticmethod
     def log_generation():
