@@ -25,3 +25,5 @@ def browser(request):  # this will return the browser value to set up method
 
 # To run the test case execute below command in terminal
 # "pytest -v -s <relative path of the .py test case file> --browser <chrome/firefox>"
+# To run two ifferent test cases simultaniously we use below command
+# "pytest -v -s -n=<number of methods> <relative path of the .py test case file> --browser <chrome/firefox>"
