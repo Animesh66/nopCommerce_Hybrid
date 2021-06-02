@@ -56,14 +56,14 @@ class TestTC002DDTLogin:
                     list_status.append("Pass")
                     time.sleep(3)
 
-            if "Fail" not in list_status:
-                self.logger.info("DDT test case is passed")
-                assert True
-                self.driver.close()
-            else:
-                self.logger.info("DDT test case is failed")
-                assert False
-                self.driver.close()
+        if "Fail" not in list_status:
+            self.logger.info("DDT test case is passed")
+            assert True
+            self.driver.close()
+        else:
+            self.logger.info("DDT test case is failed")
+            assert False
+            self.driver.close()
 
         self.logger.info("********* End of Login Data driven Test *********")
         self.logger.info("********* Execution of TestTC002DDTLogin Ended *********")
