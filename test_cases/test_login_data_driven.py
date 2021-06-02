@@ -15,7 +15,7 @@ class TestTC002DDTLogin:
     logger = LogGeneration.log_generation()
 
     def test_login(self, setup):
-        self.logger.info("************* TestTC002DDTLogin ************* ")
+        self.logger.info("************* Execution of TestTC002DDTLogin started ************* ")
         self.logger.info("************* Verify Login Test ************* ")
         self.driver = setup()
         self.driver.maximize_window()
@@ -65,5 +65,6 @@ class TestTC002DDTLogin:
                 assert False
                 self.driver.close()
 
-
+        self.logger.info("********* End of Login Data driven Test *********")
+        self.logger.info("********* Execution of TestTC002DDTLogin Ended *********")
 
