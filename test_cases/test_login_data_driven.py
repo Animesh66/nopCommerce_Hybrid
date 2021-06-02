@@ -35,24 +35,35 @@ class TestTC002DDTLogin:
             expected_title = "Dashboard / nopCommerce administration"
             if actual_title == expected_title:
                 if self.expected_result == "Pass":
-                    self.logger.info("************* Login DDT is passed ************* ")
+                    self.logger.info("************* Valid login attempt ************* ")
                     self.login.click_logout()
                     list_status.append("Pass")
                     time.sleep(3)
                 elif self.expected_result == "Fail":
-                    self.logger.info("************* Login DDT is failed ************* ")
+                    self.logger.info("************* Valid login attempt ************* ")
                     self.login.click_logout()
                     list_status.append("Fail")
                     time.sleep(3)
             elif actual_title != expected_title:
                 if self.expected_result == "Pass":
-                    self.logger.info("************* Login DDT is failed ************* ")
+                    self.logger.info("************* Invalid login attempt ************* ")
                     self.login.click_logout()
                     list_status.append("fail")
                     time.sleep(3)
                 elif self.expected_result == "Fail":
-                    self.logger.info("************* Login DDT is passed ************* ")
+                    self.logger.info("************* Invalid login attempt ************* ")
                     self.login.click_logout()
                     list_status.append("Pass")
                     time.sleep(3)
+
+            if "Fail" not in list_status:
+                self.logger.info("DDT test case is passed")
+                assert True
+                self.driver.close()
+            else:
+                self.logger.info("DDT test case is failed")
+                assert False
+                self.driver.close()
+
+
 
