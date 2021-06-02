@@ -17,7 +17,7 @@ class TestTC002DDTLogin:
     def test_login(self, setup):
         self.logger.info("************* Execution of TestTC002DDTLogin started ************* ")
         self.logger.info("************* Verify Login Test ************* ")
-        self.driver = setup()
+        self.driver = setup
         self.driver.maximize_window()
         self.driver.get(self.base_url)
         self.login = LoginNopCommerce(self.driver)
@@ -46,13 +46,12 @@ class TestTC002DDTLogin:
                     time.sleep(3)
             elif actual_title != expected_title:
                 if self.expected_result == "Pass":
-                    self.logger.info("************* Invalid login attempt ************* ")
+                    self.logger.info("************* Login successful but dashboard title does not match ************* ")
                     self.login.click_logout()
                     list_status.append("fail")
                     time.sleep(3)
                 elif self.expected_result == "Fail":
                     self.logger.info("************* Invalid login attempt ************* ")
-                    self.login.click_logout()
                     list_status.append("Pass")
                     time.sleep(3)
 
