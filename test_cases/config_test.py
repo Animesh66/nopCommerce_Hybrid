@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 # this file will automatically download the latest browser driver and run the executable file.
-# Syntax is driver = webdriver.Chrome(ChromeDriverManager().install())
+# Syntax is "driver = webdriver.Chrome(ChromeDriverManager().install())"
 # To install webdriver-manager use below command in Terminal
 # pip3 install webdriver-manager in MAC
 
