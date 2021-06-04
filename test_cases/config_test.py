@@ -6,6 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 # To install webdriver-manager use below command in Terminal
 # pip3 install webdriver-manager
 
+
 @pytest.fixture()
 def setup():
     if browser == 'chrome' or 'Chrome':
