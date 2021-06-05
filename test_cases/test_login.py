@@ -4,6 +4,7 @@ from page_object.login_page import LoginNopCommerce
 from test_cases.config_test import setup
 from utilities.read_properties import ReadConfig
 from utilities.custom_logger import LogGeneration
+import time
 
 
 class TestTC001Login:
@@ -17,6 +18,7 @@ class TestTC001Login:
         self.logger.info("************* Verify Home Page Title ************* ")
         self.driver = setup
         self.driver.maximize_window()
+        self.driver.implicitly_wait(10)
         self.driver.get(self.base_url)
         actual_title = self.driver.title
         if actual_title == "Your store. Login":
